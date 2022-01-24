@@ -1,0 +1,30 @@
+.tags{
+    display: flex;
+    border: 1px solid black;
+    width: 80%;
+    gap: 5px;
+    padding: 5px;
+    flex-wrap: wrap;
+
+    &__input{
+        flex-grow: 1;
+        border:none;
+        outline: none;
+        font-family: inherit;
+    }
+
+    &__tag{
+        border-radius: 5px;
+        padding: 2px 5px;
+        background-color: aquamarine;
+    }
+
+    &__close{
+        cursor: pointer;
+        margin-left: 5px;
+
+        &:hover{
+            color: red;
+        }
+    }
+}
