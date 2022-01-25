@@ -1,30 +1,15 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component,Input, OnInit, Output } from '@angular/core';
+import { fadeIn, fadeOut, slideLeftIn, slideRightIn } from '../aw-core/aw-animations';
 
 @Component({
   selector: 'aw-tags',
   templateUrl: './aw-tags.component.html',
   styleUrls: ['./aw-tags.component.scss'],
   animations:[
-    trigger('fadeIn',[
-      state('void', style({ opacity: 0 })),
-      transition(':enter', animate(500))
-    ]),
-
-    trigger('fadeOut',[
-      state('void', style({ opacity: 0 })),
-      transition(':leave', animate(500))
-    ]),
-
-    trigger('slideLeftIn',[
-      state('void', style({ transform: 'translateX(-5px)' })),
-      transition(':enter', animate(500))
-    ]),
-
-    trigger('slideRightIn',[
-      state('void', style({ transform: 'translateX(-5px)' })),
-      transition(':leave', animate(500))
-    ])
+    fadeIn,
+    fadeOut,
+    slideLeftIn,
+    slideRightIn
   ]
 })
 export class AwTagsComponent implements OnInit {
