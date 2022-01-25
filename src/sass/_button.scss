@@ -1,0 +1,23 @@
+.btn{
+    display: inline-block;
+    font: inherit;
+    cursor: pointer;
+    line-height: inherit;
+    padding: 3px 10px;
+    background-color: #fdfdfd ;
+    transition: background-color .3s;
+    outline: none;
+    border: none;
+
+    &__primary{
+        background-color: var(--clr-primary);
+
+        &:hover{
+            background-color: var(--clr-secondary);
+        }
+
+        &:disabled{
+            background-color: #CCC;
+        }
+    }
+}

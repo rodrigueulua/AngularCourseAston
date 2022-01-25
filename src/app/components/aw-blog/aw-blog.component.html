@@ -1,0 +1,6 @@
+<h2>Blog</h2>
+<button class="btn btn__primary" (click)="OpenAll()">Tout ouvrir</button>
+<button class="btn btn__primary" (click)="closeAll()">Tout fermer</button>
+
+<aw-blog-form [max]="300" (addEmitter)="add($event)"></aw-blog-form>
+<aw-blog-article *ngFor="let article of articles" [article]="article"></aw-blog-article>

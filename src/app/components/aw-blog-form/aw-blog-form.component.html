@@ -1,0 +1,10 @@
+<div class="blog-form">
+    <input type="text" class="blog-form__title" [(ngModel)]="article.title" autofocus>
+    <textarea [maxLength]="max" name="" id="" cols="30" rows="10" class="blog-form__text" 
+    [(ngModel)]="article.text" 
+    [ngClass]="{'blog-form__error': article.text.length == max}"></textarea>
+    <div class="blog-form__counter">{{article.text.length}}/{{max}}</div>
+
+    <button (click)="post()" class="btn btn__primary" [disabled]="article.title.length == 0 || article.text.length == 0">Ajouter</button> 
+
+</div>

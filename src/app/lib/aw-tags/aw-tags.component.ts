@@ -27,7 +27,6 @@ export class AwTagsComponent implements OnInit {
       this.tags.push(el.value);
       el.value = '';
     }
-    
   }
 
   remove(index:number): void{
